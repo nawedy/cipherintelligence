@@ -26,39 +26,58 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const MAILER_API_KEY: string;
+	export const DATABASE_URL: string;
+	export const JWT_EXPIRES_IN: string;
+	export const JWT_REFRESH_EXPIRES_IN: string;
+	export const CMS_ADMIN_EMAIL: string;
+	export const SESSION_SECRET: string;
+	export const STRIPE_SECRET_KEY: string;
+	export const STRIPE_WEBHOOK_SECRET: string;
+	export const SENTRY_DSN: string;
+	export const GOOGLE_OAUTH_CLIENT_ID: string;
+	export const GOOGLE_OAUTH_SECRET: string;
+	export const GCP_PROJECT_ID: string;
+	export const GCP_SA_KEY: string;
+	export const RATE_LIMIT: string;
+	export const NODE_OPTIONS: string;
+	export const VERCEL_PROJECT_ID: string;
+	export const VERCEL_TOKEN: string;
+	export const RENDER_API_KEY: string;
+	export const VERCEL_TEAM_ID: string;
+	export const ENCRYPTION_KEY: string;
+	export const JWT_SECRET: string;
+	export const SUPABASE_SERVICE_KEY: string;
 	export const NVM_RC_VERSION: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
 	export const NVM_CD_FLAGS: string;
-	export const TERM: string;
 	export const SHELL: string;
-	export const HOMEBREW_REPOSITORY: string;
+	export const TERM: string;
 	export const TMPDIR: string;
+	export const HOMEBREW_REPOSITORY: string;
 	export const npm_config_global_prefix: string;
 	export const CONDA_SHLVL: string;
-	export const TERM_PROGRAM_VERSION: string;
 	export const CONDA_PROMPT_MODIFIER: string;
+	export const TERM_PROGRAM_VERSION: string;
 	export const GSETTINGS_SCHEMA_DIR_CONDA_BACKUP: string;
-	export const ZDOTDIR: string;
-	export const CURSOR_TRACE_ID: string;
-	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const MallocNanoZone: string;
-	export const npm_package_optional: string;
+	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
+	export const CURSOR_TRACE_ID: string;
+	export const ZDOTDIR: string;
 	export const COLOR: string;
 	export const npm_config_noproxy: string;
 	export const npm_config_local_prefix: string;
 	export const PNPM_HOME: string;
-	export const NVM_DIR: string;
 	export const USER: string;
+	export const NVM_DIR: string;
 	export const COMMAND_MODE: string;
 	export const npm_config_globalconfig: string;
 	export const CONDA_EXE: string;
-	export const npm_package_peer: string;
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
-	export const npm_package_integrity: string;
 	export const _CE_CONDA: string;
 	export const PATH: string;
 	export const GSETTINGS_SCHEMA_DIR: string;
@@ -66,9 +85,9 @@ declare module '$env/static/private' {
 	export const _: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_init_module: string;
-	export const USER_ZDOTDIR: string;
-	export const CONDA_PREFIX: string;
 	export const __CFBundleIdentifier: string;
+	export const CONDA_PREFIX: string;
+	export const USER_ZDOTDIR: string;
 	export const npm_command: string;
 	export const PWD: string;
 	export const JAVA_HOME: string;
@@ -77,36 +96,33 @@ declare module '$env/static/private' {
 	export const npm_package_name: string;
 	export const LANG: string;
 	export const npm_config_npm_version: string;
-	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const XPC_FLAGS: string;
-	export const npm_package_engines_node: string;
+	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_config_node_gyp: string;
-	export const npm_package_dev: string;
 	export const npm_package_version: string;
-	export const _CE_M: string;
 	export const XPC_SERVICE_NAME: string;
+	export const _CE_M: string;
 	export const VSCODE_INJECTION: string;
-	export const npm_package_resolved: string;
-	export const SHLVL: string;
 	export const HOME: string;
+	export const SHLVL: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const HOMEBREW_PREFIX: string;
-	export const npm_package_dev_optional: string;
 	export const npm_config_cache: string;
-	export const CONDA_PYTHON_EXE: string;
 	export const LOGNAME: string;
+	export const CONDA_PYTHON_EXE: string;
 	export const npm_lifecycle_script: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const CONDA_DEFAULT_ENV: string;
 	export const npm_config_user_agent: string;
-	export const VSCODE_GIT_ASKPASS_NODE: string;
-	export const GIT_ASKPASS: string;
-	export const INFOPATH: string;
 	export const HOMEBREW_CELLAR: string;
+	export const INFOPATH: string;
+	export const GIT_ASKPASS: string;
+	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const DASHSCOPE_API_KEY: string;
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -119,7 +135,14 @@ declare module '$env/static/private' {
  * ```
  */
 declare module '$env/static/public' {
-	
+	export const PUBLIC_API_URL: string;
+	export const PUBLIC_SITE_NAME: string;
+	export const PUBLIC_SUPABASE_URL: string;
+	export const PUBLIC_SUPABASE_ANON_KEY: string;
+	export const PUBLIC_GA_ID: string;
+	export const PUBLIC_STRIPE_PUBLIC_KEY: string;
+	export const PUBLIC_SUPABASE_KEY: string;
+	export const PUBLIC_FIREBASE_CONFIG: string;
 }
 
 /**
@@ -136,39 +159,58 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		MAILER_API_KEY: string;
+		DATABASE_URL: string;
+		JWT_EXPIRES_IN: string;
+		JWT_REFRESH_EXPIRES_IN: string;
+		CMS_ADMIN_EMAIL: string;
+		SESSION_SECRET: string;
+		STRIPE_SECRET_KEY: string;
+		STRIPE_WEBHOOK_SECRET: string;
+		SENTRY_DSN: string;
+		GOOGLE_OAUTH_CLIENT_ID: string;
+		GOOGLE_OAUTH_SECRET: string;
+		GCP_PROJECT_ID: string;
+		GCP_SA_KEY: string;
+		RATE_LIMIT: string;
+		NODE_OPTIONS: string;
+		VERCEL_PROJECT_ID: string;
+		VERCEL_TOKEN: string;
+		RENDER_API_KEY: string;
+		VERCEL_TEAM_ID: string;
+		ENCRYPTION_KEY: string;
+		JWT_SECRET: string;
+		SUPABASE_SERVICE_KEY: string;
 		NVM_RC_VERSION: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
 		NVM_CD_FLAGS: string;
-		TERM: string;
 		SHELL: string;
-		HOMEBREW_REPOSITORY: string;
+		TERM: string;
 		TMPDIR: string;
+		HOMEBREW_REPOSITORY: string;
 		npm_config_global_prefix: string;
 		CONDA_SHLVL: string;
-		TERM_PROGRAM_VERSION: string;
 		CONDA_PROMPT_MODIFIER: string;
+		TERM_PROGRAM_VERSION: string;
 		GSETTINGS_SCHEMA_DIR_CONDA_BACKUP: string;
-		ZDOTDIR: string;
-		CURSOR_TRACE_ID: string;
-		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		MallocNanoZone: string;
-		npm_package_optional: string;
+		ORIGINAL_XDG_CURRENT_DESKTOP: string;
+		CURSOR_TRACE_ID: string;
+		ZDOTDIR: string;
 		COLOR: string;
 		npm_config_noproxy: string;
 		npm_config_local_prefix: string;
 		PNPM_HOME: string;
-		NVM_DIR: string;
 		USER: string;
+		NVM_DIR: string;
 		COMMAND_MODE: string;
 		npm_config_globalconfig: string;
 		CONDA_EXE: string;
-		npm_package_peer: string;
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
-		npm_package_integrity: string;
 		_CE_CONDA: string;
 		PATH: string;
 		GSETTINGS_SCHEMA_DIR: string;
@@ -176,9 +218,9 @@ declare module '$env/dynamic/private' {
 		_: string;
 		npm_config_userconfig: string;
 		npm_config_init_module: string;
-		USER_ZDOTDIR: string;
-		CONDA_PREFIX: string;
 		__CFBundleIdentifier: string;
+		CONDA_PREFIX: string;
+		USER_ZDOTDIR: string;
 		npm_command: string;
 		PWD: string;
 		JAVA_HOME: string;
@@ -187,36 +229,33 @@ declare module '$env/dynamic/private' {
 		npm_package_name: string;
 		LANG: string;
 		npm_config_npm_version: string;
-		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		XPC_FLAGS: string;
-		npm_package_engines_node: string;
+		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_config_node_gyp: string;
-		npm_package_dev: string;
 		npm_package_version: string;
-		_CE_M: string;
 		XPC_SERVICE_NAME: string;
+		_CE_M: string;
 		VSCODE_INJECTION: string;
-		npm_package_resolved: string;
-		SHLVL: string;
 		HOME: string;
+		SHLVL: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		HOMEBREW_PREFIX: string;
-		npm_package_dev_optional: string;
 		npm_config_cache: string;
-		CONDA_PYTHON_EXE: string;
 		LOGNAME: string;
+		CONDA_PYTHON_EXE: string;
 		npm_lifecycle_script: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		CONDA_DEFAULT_ENV: string;
 		npm_config_user_agent: string;
-		VSCODE_GIT_ASKPASS_NODE: string;
-		GIT_ASKPASS: string;
-		INFOPATH: string;
 		HOMEBREW_CELLAR: string;
+		INFOPATH: string;
+		GIT_ASKPASS: string;
+		VSCODE_GIT_ASKPASS_NODE: string;
 		DASHSCOPE_API_KEY: string;
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
@@ -234,6 +273,14 @@ declare module '$env/dynamic/private' {
  */
 declare module '$env/dynamic/public' {
 	export const env: {
+		PUBLIC_API_URL: string;
+		PUBLIC_SITE_NAME: string;
+		PUBLIC_SUPABASE_URL: string;
+		PUBLIC_SUPABASE_ANON_KEY: string;
+		PUBLIC_GA_ID: string;
+		PUBLIC_STRIPE_PUBLIC_KEY: string;
+		PUBLIC_SUPABASE_KEY: string;
+		PUBLIC_FIREBASE_CONFIG: string;
 		[key: `PUBLIC_${string}`]: string | undefined;
 	}
 }
