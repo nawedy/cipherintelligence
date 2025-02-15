@@ -7,7 +7,9 @@
 	import { PUBLIC_SITE_NAME } from '$env/static/public';
 	import { supabase, initSupabaseClient } from '$lib/supabase';
 	import { session } from '$app/stores';
-	import toast from 'svelte-french-toast';
+	import { toast } from 'svelte-sonner';
+	import { Toaster } from 'svelte-sonner';
+	import { startMonitoring } from '$lib/monitoring';
 
 	// Initialize Supabase client
 	initSupabaseClient();
@@ -30,6 +32,12 @@
 			}
 		});
 
+		// WCAG 2.1 compliance
+		document.documentElement.lang = 'en';
+		document.documentElement.style.setProperty('--color-contrast', '#241e4e');
+
+		startMonitoring();
+
 		return () => {
 			authListener?.subscription.unsubscribe();
 		};
@@ -39,12 +47,42 @@
 		try {
 			const { error } = await supabase.auth.signOut();
 			if (error) throw error;
-			toast.success('Signed out successfully');
+			toast.success('Signed out successfully', {
+				description: 'You have been securely logged out'
+			});
 		} catch (error) {
-			toast.error('Error signing out');
+			toast.error('Sign out failed', {
+				description: error.message || 'Please try again or contact support',
+				action: {
+					label: 'Retry',
+					onClick: () => handleSignOut()
+				}
+			});
 		}
 	}
 </script>
+
+<svelte:head>
+	<!-- SEO Requirements -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta property="og:type" content="website">
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "EriEthio Research",
+			"url": "https://eriethio.com",
+			"logo": "/logo.svg",
+			"sameAs": [
+				"https://twitter.com/eriethio",
+				"https://linkedin.com/company/eriethio"
+			]
+		}
+	</script>
+	<meta name="twitter:creator" content="@eriethio">
+	<meta property="og:locale" content="en_US">
+	<link rel="canonical" href="https://eriethio.com{$$page.url.pathname}">
+</svelte:head>
 
 <div class="min-h-screen">
 	<header class="bg-white shadow-sm">
@@ -166,4 +204,19 @@
 		opacity: 1;
 		transform: translateY(0);
 	}
-</style> 
+
+	:global(a) {
+		&:focus-visible {
+			outline: 2px solid var(--color-primary-500);
+			outline-offset: 2px;
+		}
+	}
+</style>
+
+<Toaster 
+	position="top-center" 
+	richColors 
+	expand={true}
+	closeButton
+	theme="light"
+/> 

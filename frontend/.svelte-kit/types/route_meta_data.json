@@ -1,0 +1,56 @@
+{
+	"/": [
+		"src/routes/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts",
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/approvals": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/builder": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/content": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/editor": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/admin/editor/[page_id]": [
+		"src/routes/admin/+layout.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/api/healthcheck": [
+		"src/routes/api/healthcheck/+server.ts"
+	],
+	"/login": [
+		"src/routes/+layout.server.ts"
+	],
+	"/products": [
+		"src/routes/+layout.server.ts"
+	],
+	"/products/[slug]": [
+		"src/routes/+layout.server.ts"
+	],
+	"/research": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(auth)/signin": [
+		"src/routes/+layout.server.ts"
+	],
+	"/(auth)/signup": [
+		"src/routes/+layout.server.ts"
+	],
+	"/[...path]": [
+		"src/routes/+layout.server.ts"
+	]
+}

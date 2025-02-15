@@ -1,8 +1,21 @@
 {
   "dependencies": {
     "@sveltejs/adapter-vercel": "^5.6.2",
-    "@sveltejs/kit": "^2.17.2",
+    "@sveltejs/kit": "2.17.2",
+    "@sveltejs/vite-plugin-svelte": "5.0.3",
     "gsap": "^3.12.7",
-    "svelte-french-toast": "^1.2.0"
+    "svelte-sonner": "^0.3.28",
+    "vite": "6.1.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^5.2.12",
+    "svelte-check": "^4.1.4"
+  },
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "check": "npm run check --prefix frontend",
+    "lint": "npm run lint --prefix frontend"
   }
 }

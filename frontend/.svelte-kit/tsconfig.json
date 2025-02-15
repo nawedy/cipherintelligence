@@ -1,29 +1,17 @@
 {
 	"compilerOptions": {
 		"paths": {
-			"$components": [
-				"../src/lib/components"
-			],
-			"$components/*": [
-				"../src/lib/components/*"
-			],
-			"$utils": [
-				"../src/lib/utils"
-			],
-			"$utils/*": [
-				"../src/lib/utils/*"
-			],
-			"$styles": [
-				"../src/lib/styles"
-			],
-			"$styles/*": [
-				"../src/lib/styles/*"
-			],
 			"$lib": [
 				"../src/lib"
 			],
 			"$lib/*": [
 				"../src/lib/*"
+			],
+			"$components": [
+				"../src/lib/components"
+			],
+			"$components/*": [
+				"../src/lib/components/*"
 			]
 		},
 		"rootDirs": [

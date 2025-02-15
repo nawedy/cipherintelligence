@@ -1,0 +1,16 @@
+# Add these crucial exclusions
+node_modules/
+build/
+dist/
+.DS_Store
+*.env.local
+*.log
+.svelte-kit/package
+/package
+.env.local
+.env.local.example
+.env.local.example.txt
+.env.local.txt
+.env.local.txt.example
+.vercel
+.env

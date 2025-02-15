@@ -4,3 +4,12 @@
 .env.local.txt
 .env.local.txt.example
 .env.local.txt.example.txt
+.vercel
+.env
+!.env.example
+!.env*.template
++.env.development
++.env.production
+*.env*
+**/.env.local
+**/secrets/

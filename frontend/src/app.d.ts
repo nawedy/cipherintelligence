@@ -2,7 +2,7 @@ import { SupabaseClient, Session } from '@supabase/supabase-js';
 
 declare global {
 	namespace App {
-		interface UserSession {
+		interface User {
 			id: string;
 			email: string;
 			role: 'admin' | 'editor' | 'user';
@@ -10,12 +10,12 @@ declare global {
 
 		interface Locals {
 			supabase: SupabaseClient;
-			getSession(): Promise<Session | null>;
-			user: UserSession | null;
+			getSession: () => Promise<Session | null>;
+			user: User | null;
 		}
 		interface PageData {
 			session: Session | null;
-			user: UserSession | null;
+			user: User | null;
 		}
 		// interface Error {}
 		// interface Platform {}

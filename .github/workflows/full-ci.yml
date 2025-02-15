@@ -1,0 +1,26 @@
+name: Full Stack CI
+on: [push, pull_request]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci --audit --production
+      - run: npx svelte-check --security
+      - uses: mikepenz/action-junit-report@v3
+        if: always()
+        with:
+          report_paths: '**/security-report.xml'
+
+  integration:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ['5432:5432']
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm run test:integration 

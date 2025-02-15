@@ -18,7 +18,14 @@ jobs:
       
       - name: Install dependencies
         working-directory: frontend
-        run: npm ci --legacy-peer-deps
+        run: npm ci --audit --omit=dev
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      
+      - name: Security scan
+        run: |
+          npx svelte-check --security
+          npx audit-ci --moderate
       
       - name: Build project
         working-directory: frontend
