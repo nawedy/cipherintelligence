@@ -1,0 +1,6 @@
+.env.local
+.env.local.example
+.env.local.example.txt
+.env.local.txt
+.env.local.txt.example
+.env.local.txt.example.txt

@@ -7,7 +7,6 @@ eriethio-website/
 │   │   │   └── styles/     # Global CSS/SASS
 │   │   ├── routes/
 │   │   │   ├── (auth)/     # Auth-related pages
-│   │   │   ├── (main)/     # Public-facing pages
 │   │   │   └── admin/      # CMS dashboard
 │   │   └── app.html        # Base HTML template
 │   ├── static/             # Assets
