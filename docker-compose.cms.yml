@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  cms:
+    build: ./backend
+    environment:
+      CMS_EDITOR_URL: ${CMS_EDITOR_URL}
+      CMS_PREVIEW_URL: ${CMS_PREVIEW_URL}
+    depends_on:
+      - db
+
+  editor:
+    image: decaporg/admin:latest
+    environment:
+      DIRECTUS_URL: ${CMS_API_URL}
+    ports:
+      - "8080:80" 

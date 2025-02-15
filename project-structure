@@ -1,0 +1,36 @@
+eriethio-website/
+├── frontend/               # SvelteKit application
+│   ├── src/
+│   │   ├── lib/
+│   │   │   ├── components/ # Reusable UI components
+│   │   │   ├── utils/      # Helper functions
+│   │   │   └── styles/     # Global CSS/SASS
+│   │   ├── routes/
+│   │   │   ├── (auth)/     # Auth-related pages
+│   │   │   ├── (main)/     # Public-facing pages
+│   │   │   └── admin/      # CMS dashboard
+│   │   └── app.html        # Base HTML template
+│   ├── static/             # Assets
+│   ├── tests/              # Playwright E2E tests
+│   └── svelte.config.js    # SvelteKit config
+│
+├── backend/                # Python API
+│   ├── app/
+│   │   ├── api/           # FastAPI/Flask routes
+│   │   ├── models/        # SQLAlchemy models
+│   │   ├── schemas/       # Pydantic models
+│   │   └── utils/         # Database/security helpers
+│   ├── tests/             # Pytest unit tests
+│   ├── requirements.txt   # Python dependencies
+│   └── main.py            # API entry point
+│
+├── docs/                  # Project documentation
+├── .github/              # CI/CD workflows
+│   └── workflows/
+│       ├── frontend.yml  # SvelteKit deployment
+│       └── backend.yml   # Python API deployment
+│
+├── docker-compose.yml    # Local development
+├── Dockerfile.frontend
+├── Dockerfile.backend
+└── .env                  # Environment variables 
